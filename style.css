@@ -1,0 +1,388 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Barlow Semi Condensed;
+}
+main {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  place-items: center;
+  overflow: hidden;
+  grid-template-rows: 30% 60% 5% 5%;
+}
+#icon {
+  display: flex;
+  width: 60rem;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 140px;
+  justify-content: space-between;
+  align-items: center;
+  border-style: solid;
+  border-color: hsl(217, 16%, 45%);
+  border-width: 3px;
+  border-radius: 10px;
+}
+#score {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 100px;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  text-align: center;
+  color: hsl(229, 64%, 46%);
+  border-radius: 10px;
+}
+b {
+  font-size: 40px;
+  color: hsl(229, 25%, 31%);
+}
+#container {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  width: 50rem;
+  height: 600px;
+}
+#RPS {
+  width: 35rem;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-sizing: border-box;
+  background-image: url(images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 100px;
+}
+
+.outer {
+  width: 200px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+span,
+span span,
+span span span {
+  border-radius: 50%;
+  border-style: solid;
+  background: transparent;
+}
+span {
+  position: absolute;
+  display: grid;
+  border-width: 55px;
+  place-items: center;
+  border-color: rgba(48, 63, 97, 0.2);
+  width: 333px;
+  height: 333px;
+}
+span span {
+  width: 253px;
+  height: 253px;
+  border-color: rgba(48, 63, 97, 0.3);
+  border-width: 40px;
+}
+span span span {
+  width: 195px;
+  height: 195px;
+  border-color: rgba(48, 63, 97, 0.5);
+  border-width: 29px;
+}
+
+.inner {
+  width: 75%;
+  height: 75%;
+  background: white;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 7px 3px black inset;
+}
+#btn {
+  width: 100px;
+  height: 30px;
+  background: transparent;
+  border-style: solid;
+  border-color: hsl(217, 16%, 45%);
+  border-radius: 5px;
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+#btn {
+  color: white;
+  letter-spacing: 2px;
+}
+
+#rules {
+  display: grid;
+  place-items: center;
+  width: 600px;
+  height: 650px;
+  position: absolute;
+  display: none;
+  box-sizing: border-box;
+  z-index: 5;
+  margin: 0;
+}
+#Rhead {
+  width: 80%;
+  height: 400px;
+  background-image: url(images/image-rules.svg);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  box-sizing: border-box;
+  background-position: center;
+  padding: 20px;
+  background-position-y: 100px;
+  background-color: white;
+  border-radius: 20px;
+}
+#Rhead img {
+  width: 20px;
+  height: 20px;
+}
+
+/*Page 2*/
+
+#gamestart {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 10% 90%;
+  grid-template-areas: "h1 win h2" "yp win hp";
+  width: 50rem;
+  height: 400px;
+  place-items: center;
+  color: white;
+  text-align: center;
+}
+#gamestart p {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+#win button {
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  border-width: 0;
+  margin-top: -18px;
+  font-family: Barlow Semi Condensed;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: hsl(229, 25%, 31%);
+}
+#win {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  grid-area: win;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+#win p {
+  font-size: 40px;
+}
+
+#h1,
+#h2,
+#win,
+#icon {
+  z-index: 3;
+}
+#yp {
+  grid-area: yp;
+}
+#hp {
+  grid-area: hp;
+}
+#h1 {
+  grid-area: h1;
+}
+#h2 {
+  grid-area: h2;
+}
+#gamestart .outer {
+  width: 200px;
+  height: 200px;
+}
+#gamestart .outer:last-child {
+  background: transparent;
+}
+#gamestart .outer:last-child .inner {
+  background: hsl(237, 49%, 15%);
+  box-shadow: none;
+}
+
+@media (max-width: 1000px) {
+  #container,
+  #gamestart {
+    width: 90%;
+  }
+  #icon {
+    width: 80%;
+    height: 130px;
+  }
+}
+@media (max-width: 900px) {
+  main {
+    grid-template-rows: 25% 60% 10% 5%;
+  }
+  #gamestart {
+    height: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 45% 20% 35%;
+    grid-template-areas: "yp hp" "h1 h2" "win win";
+    height: 375px;
+  }
+  #win {
+    margin-top: 0;
+  }
+  #win button {
+    width: 200px;
+  }
+  footer {
+    justify-content: center;
+    margin-left: 50px;
+  }
+}
+@media (max-width: 700px) {
+  #Rhead {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+  }
+
+  #RPS {
+    width: 450px;
+    height: 430px;
+    background-size: 300px;
+  }
+  #RPS .outer,
+  #gamestart .outer {
+    width: 170px;
+    height: 170px;
+  }
+  span span span {
+    width: 172px;
+    height: 172px;
+  }
+  span span {
+    width: 228px;
+    height: 228px;
+  }
+  span {
+    width: 303px;
+    height: 303px;
+  }
+}
+@media (max-width: 550px) {
+  #rules {
+    width: 100%;
+    height: 100vh;
+  }
+  #Rhead {
+    height: 100vh;
+    border-radius: 0px;
+  }
+  #gamestart p {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 500px) {
+  #RPS {
+    width: 350px;
+    height: 300px;
+    background-size: 230px;
+    margin-top: -30px;
+    background-position-y: 70px;
+  }
+
+  #container,
+  #gamestart {
+    width: 360px;
+  }
+
+  #icon {
+    height: 100px;
+  }
+  #icon img {
+    height: 80px;
+  }
+  #icon {
+    padding: 10px;
+  }
+  #score {
+    width: 80px;
+    height: 80px;
+    padding: 10px 20px;
+  }
+  #gamestart {
+    justify-content: space-between;
+  }
+  #RPS .outer,
+  #gamestart .outer {
+    width: 130px;
+    height: 130px;
+  }
+  span,
+  span span,
+  span span span {
+    border-width: 20px;
+  }
+  span span span {
+    width: 127px;
+    height: 127px;
+  }
+  span span {
+    width: 167px;
+    height: 167px;
+  }
+  span {
+    width: 207px;
+    height: 207px;
+  }
+}
+@media (max-width: 400px) {
+  #container,
+  #gamestart {
+    width: 340px;
+  }
+  #icon {
+    width: 310px;
+  }
+  #RPS {
+    width: 340px;
+    height: 250px;
+    background-size: 200px;
+    background-position-y: bottom;
+  }
+}
